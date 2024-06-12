@@ -5,7 +5,6 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {usePokemons} from '../hooks/usePokemons';
 import {PokedexItem} from '../components/PokedexItem';
-import {Pokeball} from '../components/Pokeball';
 import {Spinner} from '../components/Spinner';
 import {colors} from '../theme/colors';
 
@@ -40,12 +39,9 @@ const Index = () => {
 				onEndReached={getPokemons}
 				onEndReachedThreshold={0.4}
 				ListFooterComponent={<Spinner />}
-				columnWrapperStyle={{justifyContent: 'space-evenly'}}
 				removeClippedSubviews
-				numColumns={2}
 				ListHeaderComponent={
 					<View style={styles.titleContainer}>
-						<Pokeball size={180} position={-50} />
 						<Text style={styles.title}>Pokédex</Text>
 					</View>
 				}
