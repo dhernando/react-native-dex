@@ -1,0 +1,13 @@
+version: '3.9'
+volumes:
+  node_modules:
+services:
+  app:
+    container_name: react-native-sandbox
+    build: .
+    command: npm run web
+    volumes:
+      - .:/var/app
+      - /var/app/node_modules/
+    ports:
+      - '8081:8081'
