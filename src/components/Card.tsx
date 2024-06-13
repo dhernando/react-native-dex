@@ -13,7 +13,7 @@ const BuildCard = ({
 }: Props) => {
   return (
     <View>
-      <Text>{name} - #{id}</Text>
+      <Text>#{id} {name}</Text>
     </View>
   )
 }
